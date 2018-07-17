@@ -1,7 +1,7 @@
 -- 	1.	Get all customers and their addresses.
-SELECT "customers"."first_name", "customers"."last_name", "addresses"."street", "addresses"."city", "addresses"."state", "addresses"."zip"
+SELECT *
 FROM "customers"
-  JOIN "addresses" ON "addresses"."customer_id" = "customers"."id";
+  JOIN "addresses" ON "customers".id = "addresses".id;
 
 --  2.	Get all orders and their line items.
 SELECT *
